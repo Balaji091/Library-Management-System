@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Issued Books</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS for Table and Heading Design -->
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Arial', sans-serif;
+        }
+        .container {
+            max-width: 900px;
+            margin-top: 30px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #dee2e6;
+        }
+        th {
+            background-color: #f4f5f7;
+            color: black;
+            font-weight: bold;
+        }
+        td {
+            color: #343a40;
+        }
+        @media (max-width: 576px) {
+            table {
+                font-size: 0.9rem;
+            }
+            th, td {
+                padding: 8px;
+            }
+        }
+        /* Custom styles for the heading */
+        .page-title {
+            position: relative;
+            display: inline-block;
+            font-size: 2.0rem;
+            color: #b1032e;
+            margin-bottom: 40px;
+            font-family: 'Georgia', serif; /* Professional font style */
+        }
+        .page-title:after {
+            content: '';
+            display: block;
+            width: 60%;
+            height: 4px;
+            background-color: #007bff;
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center page-title">Issued Books</h1>
+        
+        <!-- Book Table -->
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Book Title</th>
+                        <th>Author</th>
+                        <th>Issued to</th>
+                        <th>Issue Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Example Table Rows (repeat for each book) -->
+                    <tr>
+                        <td>Book Title</td>
+                        <td>Author Name</td>
+                        <td>Student Name</td>
+                        <td>YYYY-MM-DD</td>
+                    </tr>
+                    
+                    <!-- Repeat table rows for each issued book -->
+                    <tr>
+                        <td>Book Title</td>
+                        <td>Author Name</td>
+                        <td>Student Name</td>
+                        <td>YYYY-MM-DD</td>
+                    </tr>
+                    <tr>
+                        <td>Book Title</td>
+                        <td>Author Name</td>
+                        <td>Student Name</td>
+                        <td>YYYY-MM-DD</td>
+                    </tr>
+                    <tr>
+                        <td>Book Title</td>
+                        <td>Author Name</td>
+                        <td>Student Name</td>
+                        <td>YYYY-MM-DD</td>
+                    </tr>
+                    <tr>
+                        <td>Book Title</td>
+                        <td>Author Name</td>
+                        <td>Student Name</td>
+                        <td>YYYY-MM-DD</td>
+                    </tr>
+                    <tr>
+                        <td>Book Title</td>
+                        <td>Author Name</td>
+                        <td>Student Name</td>
+                        <td>YYYY-MM-DD</td>
+                    </tr>
+                    <tr>
+                        <td>Book Title</td>
+                        <td>Author Name</td>
+                        <td>Student Name</td>
+                        <td>YYYY-MM-DD</td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+        <!-- End Book Table -->
+        
+    </div>
+
+    <!-- Bootstrap JS and dependencies (jQuery, Popper.js) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

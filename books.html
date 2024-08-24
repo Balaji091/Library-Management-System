@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Library Management</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        .nav {
+            background-color: white;
+            color:black;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .nav a {
+            color: rgb(65, 63, 63);
+            text-decoration: none;
+            padding: 10px 15px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        .nav a:hover {
+            color: red;
+        }
+        .container {
+            padding-top: 60px; /* Adjusted padding for smaller screens */
+            padding-bottom: 20px; /* Bottom padding for spacing */
+            max-width: 1200px; /* Added max-width for content */
+            margin: auto; /* Centered container */
+        }
+        .category {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+            padding: 20px;
+            transition: transform 0.3s;
+        }
+        .category:hover {
+            transform: translateY(-10px);
+        }
+        .category h2 {
+            color: black;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+        .book-card {
+            background: #f4f4f9;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            margin: 15px 0;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s;
+        }
+        .book-card:hover {
+            background: #e8e8f1;
+        }
+        .book-info {
+            flex: 1;
+            padding-right: 15px;
+        }
+        .book-info h3 {
+            margin: 0 0 5px 0;
+            color: #333;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+        .book-info p {
+            margin: 0;
+            color: #666;
+            font-size: 0.875rem;
+            font-weight: 400;
+        }
+        .issue-btn {
+            width: 80px;
+            height: 35px;
+            background: #eb141f;
+            color: white;
+            font-size: 12px;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .issue-btn:hover {
+            background: #b41033;
+        }
+        @media (max-width: 992px) {
+            .nav {
+                padding: 5px;
+            }
+            .nav a {
+                font-size: 14px;
+            }
+        }
+        @media (max-width: 768px) {
+            .nav a {
+                font-size: 12px;
+            }
+            .container {
+                padding-top: 50px; /* Adjusted padding for smaller screens */
+            }
+        }
+        @media (max-width: 570px) {
+            .category h2 {
+                font-size: 1rem;
+            }
+            .book-info h3 {
+                font-size: 0.8rem;
+            }
+            .book-info p {
+                font-size: 0.7rem;
+            }
+            .issue-btn {
+                padding: 2px 5px;
+                font-size: 0.5rem;
+                width: 60px;
+                height: 25px;
+            }
+            .container {
+                padding: 120px 10px 10px; /* Adjusted padding for smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <a href="#engineering-books">Engineering </a>
+        <a href="#intermediate-books">Intermediate</a>
+        <a href="#history-books">History</a>
+        <a href="#story-books">Story</a>
+        <a href="#competitive-books">Competitive</a>
+    </div>
+
+    <div class="container">
+        <!-- Engineering Books Category -->
+        <div class="category" id="engineering-books">
+            <h2>Engineering Books</h2>
+            <div class="book-card">
+                <div class="book-info">
+                    <h3>Introduction to Algorithms</h3>
+                    <p>Author: Thomas H. Cormen</p>
+                </div>
+                <button class="issue-btn" onclick="issueBook('Introduction to Algorithms')">Issue Book</button>
+            </div>
+            <div class="book-card">
+                <div class="book-info">
+                    <h3>Digital Design</h3>
+                    <p>Author: M. Morris Mano</p>
+                </div>
+                <button class="issue-btn" onclick="issueBook('Digital Design')">Issue Book</button>
+            </div>
+            <!-- Add more books here -->
+        </div>
+
+        <!-- Intermediate Books Category -->
+        <div class="category" id="intermediate-books">
+            <h2>Intermediate Books</h2>
+            <div class="book-card">
+                <div class="book-info">
+                    <h3>Physics for Class 12</h3>
+                    <p>Author: H.C. Verma</p>
+                </div>
+                <button class="issue-btn" onclick="issueBook('Physics for Class 12')">Issue Book</button>
+            </div>
+            <div class="book-card">
+                <div class="book-info">
+                    <h3>Chemistry for Class 11</h3>
+                    <p>Author: Nootan</p>
+                </div>
+                <button class="issue-btn" onclick="issueBook('Chemistry for Class 11')">Issue Book</button>
+            </div>
+            <!-- Add more books here -->
+        </div>
+
+        <!-- History Books Category -->
+        <div class="category" id="history-books">
+            <h2>History Books</h2>
+            <div class="book-card">
+                <div class="book-info">
+                    <h3>Indian History</h3>
+                    <p>Author: H.C. Verma</p>
+                </div>
+                <button class="issue-btn" onclick="issueBook('Indian History for Class 12')">Issue Book</button>
+            </div>
+            <div class="book-card">
+                <div class="book-info">
+                    <h3>World History</h3>
+                    <p>Author: Norman Lowe</p>
+                </div>
+                <button class="issue-btn" onclick="issueBook('World History')">Issue Book</button>
+            </div>
+            <!-- Add more books here -->
+        </div>
+
+        <!-- Story Books Category -->
+        <div class="category" id="story-books">
+            <h2>Story Books</h2>
+            <div class="book-card">
+                <div class="book-info">
+                    <h3>The Alchemist</h3>
+                    <p>Author: Paulo Coelho</p>
+                </div>
+                <button class="issue-btn" onclick="issueBook('The Alchemist')">Issue Book</button>
+            </div>
+            <div class="book-card">
+                <div class="book-info">
+                    <h3>Harry Potter</h3>
+                    <p>Author: J.K. Rowling</p>
+                </div>
+                <button class="issue-btn" onclick="issueBook('Harry Potter')">Issue Book</button>
+            </div>
+            <!-- Add more books here -->
+        </div>
+
+        <!-- Competitive Books Category -->
+        <div class="category" id="competitive-books">
+            <h2>Competitive Books</h2>
+            <div class="book-card">
+                <div class="book-info">
+                    <h3>Quantitative Aptitude</h3>
+                    <p>Author: R.S. Aggarwal</p>
+                </div>
+                <button class="issue-btn" onclick="issueBook('Quantitative Aptitude')">Issue Book</button>
+            </div>
+            <div class="book-card">
+                <div class="book-info">
+                    <h3>Verbal Reasoning</h3>
+                    <p>Author: R.S. Aggarwal</p>
+                </div>
+                <button class="issue-btn" onclick="issueBook('Verbal Reasoning')">Issue Book</button>
+            </div>
+            <!-- Add more books here -->
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Smooth scrolling on all links with hash
+            document.querySelectorAll('a[href*="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const hash = this.getAttribute('href');
+                    const targetOffset = document.querySelector(hash).offsetTop - document.querySelector('.nav').offsetHeight + 1;
+                    
+                    window.scrollTo({
+                        top: targetOffset,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

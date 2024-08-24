@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .main-content {
+           
+            padding: 20px;
+            transition: margin-left 0.3s ease;
+        }
+        .hero {
+            background: 
+                linear-gradient(rgba(247, 242, 242, 0.2), rgba(248, 250, 248, 0.5)), 
+                url('images/l4.jpg') no-repeat center center;
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgb(244, 247, 245);
+            text-align: center;
+            
+        }
+        .hero h1 {
+            font-size: 3rem;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        
+.card {
+    margin-bottom: 20px;
+}
+.card-img-top {
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+.card-body {
+    padding: 20px;
+}
+.card-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.card-text {
+    font-size: 16px;
+    color: #666;
+}
+
+.btn-danger {
+    background: #ee3039;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            text-align: center;
+}
+.btn-primary:hover {
+    background-color: #23527c;
+    border-color: #23527c;
+}
+        .news-item img {
+            max-height: 150px;
+            object-fit: cover;
+        }
+        /* Add this to your CSS file */
+
+/* Medium screen size (768px - 992px) */
+@media (min-width: 768px) and (max-width: 992px) {
+ .main-content {
+    margin-left: 200px;
+  }
+ .hero {
+    height: 250px;
+  }
+ .section {
+    margin-bottom: 15px;
+  }
+ .card {
+    margin-bottom: 15px;
+  }
+ .card-img-top {
+    height: 200px;
+  }
+ .card-body {
+    padding: 15px;
+  }
+ .card-title {
+    font-size: 1.5rem;
+  }
+ .card-text {
+    font-size: 16px;
+  }
+}
+
+/* Small screen size (576px - 768px) */
+@media (min-width: 576px) and (max-width: 768px) {
+ .main-content {
+    margin-left: 150px;
+  }
+ .hero {
+    height: 200px;
+  }
+ .section {
+    margin-bottom: 10px;
+  }
+ .card {
+    margin-bottom: 10px;
+  }
+ .card-img-top {
+    height:150px;
+  }
+ .card-body {
+    padding: 10px;
+  }
+ .card-title {
+    font-size: 1.2rem;
+  }
+ .card-text {
+    font-size: 16px;
+  }
+}
+
+/* Extra small screen size (less than 576px) */
+@media (max-width: 576px) {
+ .main-content {
+    margin-left: 80px;
+  }
+ .hero {
+    height: 150px;
+  }
+  #intro{
+    font-size: 35px;
+  }
+ .section {
+    margin-bottom: 5px;
+  }
+ .card {
+    margin-bottom: 5px;
+    
+  }
+ .card-img-top {
+    height: 150px;
+  }
+ .card-body {
+    padding: 5px;
+  }
+ .card-title {
+    font-size: 1rem;
+  }
+ .card-text {
+    font-size: 13px;
+  }
+  .btn{
+    height: 30px;
+    font-size: 10px;
+    border-radius: 5px;
+  }
+}
+#scroll{
+    color: rgb(248, 34, 34);
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <h1 id="intro">Welcome to RGUKT-SKLM Library</h1>
+        </div>
+        <div class="container">
+            <div class="row section">
+                <div class="col-12">
+                    <h2>Announcements</h2>
+                    <div id="announcementsCarousel" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <a id="scroll" href="#">New Books Available</a>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <a id="scroll" href="#">Library Hours for Summer</a>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <a id="scroll" href="#">Upcoming Book Club Meetings</a>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#announcementsCarousel" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#announcementsCarousel" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row section">
+                <div class="col-12">
+                    <h2>Popular Books</h2>
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6 col-12">
+                            <div class="card">
+                                <img src="images/book1.jpg" class="card-img-top" alt="Book 1">
+                                <div class="card-body">
+                                    <h5 class="card-title">Book Title 1</h5>
+                                    <p class="card-text">Author: Author Name</p>
+                                    <p class="card-text">A brief description of the book goes here. It can include key points or a short summary.</p>
+                                    <a href="#" class="btn btn-danger">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-12">
+                            <div class="card">
+                                <img src="images/book2.jpg" class="card-img-top" alt="Book 2">
+                                <div class="card-body">
+                                    <h5 class="card-title">Book Title 2</h5>
+                                    <p class="card-text">Author: Author Name</p>
+                                    <p class="card-text">A brief description of the book goes here. It can include key points or a short summary.</p>
+                                    <a href="#" class="btn btn-danger">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-12">
+                            <div class="card">
+                                <img src="images/book3.jpg" class="card-img-top" alt="Book 3">
+                                <div class="card-body">
+                                    <h5 class="card-title">Book Title 3</h5>
+                                    <p class="card-text">Author: Author Name</p>
+                                    <p class="card-text">A brief description of the book goes here. It can include key points or a short summary.</p>
+                                    <a href="#" class="btn btn-danger">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row section">
+                <div class="col-12">
+                    <h2>Library News</h2>
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6 col-12">
+                            <div class="card">
+                                <img src="images/lib1.jpg" class="card-img-top" alt="Library News 1">
+                                <div class="card-body">
+                                    <h5 class="card-title">Library Event 1</h5>
+                                    <p class="card-text">Details about the event can be highlighted here. This is a short summary of the event.</p>
+                                    <a href="#" class="btn btn-danger">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-12">
+                            <div class="card">
+                                <img src="images/lib2.jpg" class="card-img-top" alt="Library News 2">
+                                <div class="card-body">
+                                    <h5 class="card-title">Library Event 2</h5>
+                                    <p class="card-text">Details about the event can be highlighted here. This is a short summary of the event.</p>
+                                    <a href="#" class="btn btn-danger">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-12">
+                            <div class="card">
+                                <img src="images/lib3.jpg" class="card-img-top" alt="Library News 3">
+                                <div class="card-body">
+                                    <h5 class="card-title">Library Event 3</h5>
+                                    <p class="card-text">Details about the event can be highlighted here. This is a short summary of the event.</p>
+                                    <a href="#" class="btn btn-danger">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

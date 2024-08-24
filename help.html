@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Menu - College Library Management System</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Custom styles -->
+    <style>
+        /* Custom styles for help menu */
+       
+        body {
+            background-color: white;
+        }
+
+        .help-section {
+            margin-bottom: 20px;
+        }
+
+        .card-header {
+            background-color: #f6f6fd;
+            color: black;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .card-body {
+            background-color: #fff;
+        }
+
+        .accordion .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s;
+        }
+
+        .accordion .card:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-body p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .page-title {
+            position: relative;
+            display: inline-block;
+            font-size: 2.0rem;
+            color: #b1032e;
+            margin-bottom: 40px;
+        }
+
+        .page-title:after {
+            content: '';
+            display: block;
+            width: 60%;
+            height: 4px;
+            background-color: #007bff;
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+        
+        h2 {
+            color: black; /* Set h2 color to black */
+        }
+        
+        .highlight {
+            color: #007bff; /* Change to desired color */
+        }
+
+        /* Ensure button text is visible */
+        .btn-link {
+            color: black; /* Change to a color that contrasts with the background */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <h1 class="text-center mb-4 page-title">Help Menu</h1>
+
+                <div class="accordion" id="accordionExample">
+
+                    <div class="card help-section">
+                        <div class="card-header" id="headingOne">
+                            <h2 class="mb-0" id="k">
+                                <button class="btn btn-link" type="button" data-toggle="collapse"
+                                    data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    <i class="fas fa-book-open mr-2"></i> <span class="highlight">How to Search for Books?</span>
+                                </button>
+                            </h2>
+                        </div>
+
+                        <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+                                <p>To search for books, use the search bar located at the top of the library
+                                    management system interface. Enter keywords, titles, authors, or ISBN numbers to
+                                    find relevant books.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card help-section">
+                        <div class="card-header" id="headingTwo">
+                            <h2 class="mb-0" id="k">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                    data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    <i class="fas fa-hand-holding-heart mr-2"></i> How to Borrow Books?
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+                                <p>To borrow books, select the desired book and click on the "Borrow" button. Make
+                                    sure you have your student ID card ready for verification purposes.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card help-section">
+                        <div class="card-header" id="headingThree">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                    data-target="#collapseThree" aria-expanded="false"
+                                    aria-controls="collapseThree">
+                                    <i class="fas fa-history mr-2"></i> How to Renew Books?
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+                                <p>To renew books, go to your account settings and find the "Renew" option next to the
+                                    borrowed books. You can renew each book once unless it has been reserved by
+                                    someone else.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card help-section">
+                        <div class="card-header" id="headingFour">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                    data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    <i class="fas fa-undo-alt mr-2"></i> How to Return Books?
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+                                <p>To return books, visit the library and drop off the books at the return counter.
+                                    Alternatively, you can return them through the library management system by
+                                    selecting the "Return" option next to each borrowed book.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies (jQuery, Popper.js) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
